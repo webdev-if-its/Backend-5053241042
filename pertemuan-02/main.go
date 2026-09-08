@@ -9,6 +9,7 @@ func HitungSubtotal(qty int, hargaSatuan float64) float64 {
     return float64(qty) * hargaSatuan
 }
 
+//level 2
 func HitungTotalPesanan(qty []int, hargaSatuan []float64) float64 {
     if len(qty) != len(hargaSatuan) {
         return 0
@@ -20,10 +21,12 @@ func HitungTotalPesanan(qty []int, hargaSatuan []float64) float64 {
     return total
 }
 
+//level 3
 func TerapkanPajak(total float64, tarifPajak float64) float64 {
     return total * (1 + tarifPajak)
 }
 
+//level 4
 func HitungDiskon(total float64) float64 {
     if total >= 1000000 {
         return total * 0.10
@@ -32,8 +35,13 @@ func HitungDiskon(total float64) float64 {
     }
     return 0
 }
+
+// Level 5
 func TotalSetelahDiskon(qty []int, hargaSatuan []float64, tarifPajak float64) float64 {
-	panic("belum diimplementasikan")
+    subtotal := HitungTotalPesanan(qty, hargaSatuan)
+    diskon := HitungDiskon(subtotal)
+    setelahDiskon := subtotal - diskon
+    return TerapkanPajak(setelahDiskon, tarifPajak)
 }
 
 func ValidasiPesanan(qty []int, hargaSatuan []float64) (bool, string) {
