@@ -1,4 +1,4 @@
-# backend-nrp
+# backend- 5053241042
 
 Repo tugas mata kuliah **Pengembangan Backend Dasar**, dibuat dari template [`webdev-if-its/backend-template`](https://github.com/webdev-if-its/backend-template). Ganti judul di atas jadi nama repo kalian sendiri (`backend-nrp`, contoh: `backend-5025201012`).
 
@@ -27,21 +27,27 @@ Kalau dosen memperbaiki sesuatu di pertemuan yang sudah dirilis (mis. ada bug di
 Bagian di bawah ini **isi bertahap** sesuai level yang sedang kalian kerjakan (lihat `pertemuan-01/SOAL.md`) — heading-nya dicek otomatis, jangan diganti namanya.
 
 ## Identitas
-- Nama: (tulis di sini)
-- NRP: (tulis di sini)
-- Kelas: (tulis di sini)
+
+- Nama: Ziyad Raziq Lahitidra Afey
+- NRP: 5053241042
+- Kelas: M (RPL)
 
 ## Commit vs Push
-(tulis di sini)
+
+`git commit` menyimpan perubahan di repo lokal, sedangkan `git push` mengirim perubahan itu ke remote (GitHub). Kalau seseorang commit tapi lupa push, teman satu tim tetap melihat versi lama di GitHub.
 
 ## Reproducibility
-(tulis di sini)
+
+Kalau tim menjalankan program dengan versi Go berbeda, hasilnya bisa tidak konsisten. Misalnya fitur baru di Go 1.23 tidak ada di Go 1.19, sehingga kode bisa error.
 
 ## Catatan Merge Conflict
-(tulis di sini)
+
+Konflik terjadi di fungsi `CetakInfo` karena dua branch mengubah baris `return` dengan cara berbeda. Branch `fitur-sapaan` menambahkan sapaan, sedangkan branch utama mengubah format output. Hasil akhirnya saya gabungkan: tetap menampilkan Nama, NRP, versi Go, dan juga sapaan dari `Sapa()`.
 
 ## Kenapa .gitignore Penting
-(tulis di sini)
+
+Kalau file hasil build (`*.exe`, `bin/`) atau konfigurasi IDE (`.vscode/`, `.idea/`) ikut tercommit, repo jadi berantakan dan teman satu tim bisa terganggu karena file pribadi ikut terbawa.
 
 ## Refleksi
-(tulis di sini)
+
+Bagian paling membingungkan adalah saat pertama kali mengalami merge conflict karena muncul tanda `<<<<<<<` dan `>>>>>>>`. Setelah mencoba menyatukan isi kedua branch, saya jadi paham cara menyelesaikan konflik. Sekarang saya lebih percaya diri menghadapi konflik di Git.
