@@ -6,11 +6,18 @@ import "fmt"
 // Ganti setiap "panic" dengan implementasi yang benar.
 
 func HitungSubtotal(qty int, hargaSatuan float64) float64 {
-	panic("belum diimplementasikan")
+    return float64(qty) * hargaSatuan
 }
 
 func HitungTotalPesanan(qty []int, hargaSatuan []float64) float64 {
-	panic("belum diimplementasikan")
+    if len(qty) != len(hargaSatuan) {
+        return 0
+    }
+    total := 0.0
+    for i := 0; i < len(qty); i++ {
+        total += HitungSubtotal(qty[i], hargaSatuan[i])
+    }
+    return total
 }
 
 func TerapkanPajak(total float64, tarifPajak float64) float64 {
