@@ -30,6 +30,7 @@ func CetakInfo(nama string) string {
     return fmt.Sprintf("Nama: %s\nNRP: %s\n%s\n%s", nama, NRP, runtime.Version(), Sapa(nama))
 }
 
+
 func main() {
     nama := ResolveNama(os.Args[1:], NRP)
     fmt.Println(CetakInfo(nama))
